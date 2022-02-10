@@ -104,7 +104,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
 
 
-        <li class="scroll-to-section" style="background-color: palegreen;">
+        <li class="scroll-to-section" >
                 @auth
 
 
@@ -120,7 +120,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
                 @guest
 
-                    Cart[0]
+                    
 
                 @endguest
 

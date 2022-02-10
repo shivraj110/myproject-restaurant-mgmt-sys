@@ -13,6 +13,62 @@
         	@include("admin.admincss")
 
   </head>
+
+
+
+         <style>
+
+
+           form{
+                background-color: black;
+                max-width: 500px;
+                margin: 2rem auto;
+                border: 2px solid black;
+                padding: 2rem;
+               }   
+
+
+                    label{
+                      font-size: medium;
+                      font-family: cursive;
+
+                      padding: 5px;
+                  display: block;
+                }
+
+
+                input{ align-items: center;
+
+                  display: block;
+
+                  width: 100%;
+                }
+
+
+
+         </style> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <body>
 
 
@@ -26,35 +82,33 @@
               <form action="{{url('/update', $data->id)}}" method="post" enctype="multipart/form-data">
 
 
-                @csrf
-
-
+             
                 <div>
-                  <label>Title</label>
+                  <label style="color: pink;">Title</label>
                   <input style="color: blueviolet;" type="text" name="title" value="{{$data->title}}"  required>
                 </div>
 
                 <div>
-                  <label>Price</label>
+                  <label style="color: pink;">Price</label>
                   <input style="color: blueviolet;" type="num" name="price" value="{{$data->price}}"  required>
                 </div>
 
                 
                 <div>
-                  <label>Description</label>
+                  <label style="color: pink;">Description</label>
                   <input style="color: blueviolet;" type="text" name="description" value="{{$data->description}}"  required>
                 </div>
 
 
                 <div>
-                  <label>Old Image</label>
+                  <label style="color: pink;">Old Image</label>
                   <img height="200" width="200" src="/foodimage/{{$data->image}}">
                 </div>
 
 
 
                 <div>
-                  <label> New Image</label>
+                  <label style="color: pink;"> New Image</label>
                   <input type="file" name="image" required>
                 </div>
 
@@ -63,7 +117,7 @@
 
                 <div>
                   
-                  <input style="color:green;" type="Submit" value="Save" >
+                  <input class="btn btn-warning" style="color:green;" type="Submit" value="Save" >
                 </div>
 
 

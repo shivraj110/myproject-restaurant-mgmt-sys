@@ -34,6 +34,166 @@ https://templatemo.com/tm-558-klassy-cafe
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     </head>
+
+                <style>
+                     table{
+                        background-color: floralwhite;
+                max-width: 800px;
+                max-height: 400px;
+                margin: 2rem auto;
+                border: 2px solid white;
+                padding: 2rem;
+
+                     }
+
+
+
+
+
+                }
+
+
+
+                     th{
+
+                    color: pink;
+
+                    font-family: cursive;
+                    font-size: large;
+                    font-weight: bold;
+           ;
+
+          }
+
+
+
+                    tr {
+            transition: all .2s ease-in;
+            cursor: pointer;
+          }
+
+
+          td {
+
+            font-size: large;
+
+            font-weight: bold;
+
+
+
+            
+
+            color: darkolivegreen;
+            padding: 5px;
+            text-align: center;
+            ;
+          }
+
+
+
+
+
+          label{
+
+                      font-size: large;
+                      font-family: cursive;
+
+                      align-items: center;
+
+                      width: 50%;
+
+                      padding: 5px;
+                  display: block;
+                } 
+
+                 input{ 
+                  align-items: center;
+
+                  display: block;
+
+                  width: 50%;
+                }
+
+
+
+               input:hover
+          {
+            background-color: lightgoldenrodyellow ;
+            transform: scale(1.02);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+
+
+          }
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <body>
     
@@ -161,25 +321,26 @@ https://templatemo.com/tm-558-klassy-cafe
     <div id="top">
 
 
-    		<table align="center" bgcolor="black">
+    		<table align="center">
     			<tr>
-    				<th style="padding:30px; color: yellow;"> Food Name</th>
-    				<th style="padding:30px; color: yellow;">Price</th>
-    				<th style="padding:30px; color: yellow;">Quantity</th>
-    				<th style="padding:30px; color: yellow;">Action</th>
+    				<th style="padding:30px; color: pink; background-color: black; font-weight: bold; font-size: x-large;font-family: cursive;"> Food Name</th>
+    				<th style="padding:30px; color: pink; background-color: black; font-weight: bold; font-size: x-large; font-family: cursive;">Price</th>
+    				<th style="padding:30px; color: pink; background-color: black; font-weight: bold; font-size: x-large;font-family: cursive;">Quantity</th>
+    				<th style="padding:30px; color: pink; background-color: black; font-weight: bold; font-size: x-large;font-family: cursive;">Action</th>
     				
     				
     			</tr>
 
 
-    			<form action="{{url('orderconfirm')}}" method="post" >
+    			<form id="guest" action="{{url('orderconfirm')}}" method="post">
+
 
     				@csrf
 
     				@foreach($data as $data)
     				<tr align="center">
 
-    					<td style="color:blueviolet;">
+    					<td style="color:blueviolet; ">
 
     						<input type="text"  name="foodname[]" value="{{$data->title}}" hidden="">
 
@@ -216,7 +377,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
     			@foreach($data2 as $data2)
 
-    			<tr align="center", style="position: relative; top:-210px; right: -360px;">
+    			<tr align="center", style="position: relative; top:-70px; right: -400px;">
 
     				<td style="color:darkred;"><a href="{{url('/remove', $data2->id)}}" class="btn btn-warning">Remove</a>
     				</td>
@@ -241,22 +402,22 @@ https://templatemo.com/tm-558-klassy-cafe
 
     			<div style="padding: 10px;">
     				
-    				<label>Name</label>
-    				<input type="text" name="name" placeholder="Name">
+    				<label style="color:pink; font-size:large; font-weight: bold; background-color: black; font-family: cursive;">Name</label>
+    				<input style="background-color:lavender;" type="text" name="name" placeholder="Name">
     			</div>
 
 
     			<div style="padding: 10px;">
     				
-    				<label>Phone</label>
-    				<input type="number" name="phone" placeholder="Phone Number">
+    				<label style="color:pink; font-size:large; font-weight: bold; background-color: black; font-family: cursive;">Phone</label>
+    				<input style="background-color:lavender;" type="number" name="phone" placeholder="Phone Number">
     			</div>
 
 
     			<div style="padding: 10px;">
     				
-    				<label>Address</label>
-    				<input type="text" name="address" placeholder="Address">
+    				<label style="color:pink; font-size:large; font-weight: bold; background-color: black;font-family: cursive;">Address</label>
+    				<input style="background-color:lavender;" type="text" name="address" placeholder="Address">
     			</div>
 
 
